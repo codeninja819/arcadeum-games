@@ -1,8 +1,7 @@
 import { useAccount, useEnsName } from 'wagmi';
 import Image from 'next/image';
 import Link from 'next/link';
-import LogoImage from '../assets/logo-image.png';
-import LogoTitle from '../assets/logo-title.png';
+import Jrny from '../assets/jrny.png';
 import Home from '../assets/home.svg';
 import Raffle from '../assets/raffle.svg';
 import Coin from '../assets/coin.svg';
@@ -46,15 +45,11 @@ export function Navbar() {
           className=' inline-block my-[50px] mx-[19px] flex flex-col justify-center items-center'
         >
           <Image
-            src={LogoImage}
+            src={Jrny}
             alt='Logo-Image'
             className='rounded-[20px] w-[105px] h-full mb-[5px]'
           />
-          <Image
-            src={LogoTitle}
-            alt='Logo-title'
-            className='rounded-[20px] w-[191px] h-full'
-          />
+          <div className='rounded-[20px] w-[191px] h-full flex justify-center text-[24px] text-center'>Arcadeum Games</div>
         </Link>
 
         {links.map((item, index) =>
