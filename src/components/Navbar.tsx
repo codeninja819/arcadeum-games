@@ -8,6 +8,7 @@ import Coin from '../assets/coin.svg';
 import Crash from '../assets/crash.svg';
 import Dice from '../assets/dice.svg';
 import Lotto from '../assets/lotto.svg';
+import Sports from '../assets/sports.svg';
 import Roullette from '../assets/roullette.svg';
 import { useRouter } from 'next/router';
 
@@ -17,9 +18,14 @@ export function Navbar() {
 
   const links = [
     { icon: <Home fill={'red'} />, title: 'Home', path: '/', alive: true },
-    { icon: <Coin />, title: 'Original Games', path: '/coinflip', alive: true },
-    { icon: <Raffle />, title: 'Casino', path: '/raffle', alive: false },
-    { icon: <Crash />, title: 'Lottery', path: '/crash', alive: false },
+    {
+      icon: <Crash />,
+      title: 'Original Games',
+      path: '/coinflip',
+      alive: true,
+    },
+    { icon: <Coin />, title: 'Casino', path: '/raffle', alive: false },
+    { icon: <Raffle />, title: 'Lottery', path: '/crash', alive: false },
     { icon: <Dice />, title: 'Scratch Cards', path: '/dice', alive: false },
     {
       icon: <Lotto />,
@@ -27,7 +33,7 @@ export function Navbar() {
       path: '/lotto',
       alive: false,
     },
-    { icon: <Lotto />, title: 'Sports', path: '/lotto', alive: false },
+    { icon: <Sports width="18" />, title: 'Sports', path: '/lotto', alive: false },
     {
       icon: <Roullette />,
       title: 'Roullette',
@@ -42,14 +48,16 @@ export function Navbar() {
       <div className='w-[280px] h-full min-h-screen border-solid border-r-[1px] border-[#666666] fixed overflow-scroll py-10'>
         <Link
           href='/'
-          className=' inline-block my-[50px] mx-[19px] flex flex-col justify-center items-center'
+          className='my-[50px] mx-[19px] flex flex-col justify-center items-center'
         >
           <Image
             src={Jrny}
             alt='Logo-Image'
             className='rounded-[20px] w-[105px] h-full mb-[5px]'
           />
-          <div className='rounded-[20px] w-[191px] h-full flex justify-center text-[24px] text-center'>Arcadeum Games</div>
+          <div className='rounded-[20px] w-[191px] h-full flex justify-center text-[24px] text-center'>
+            Arcadeum Games
+          </div>
         </Link>
 
         {links.map((item, index) =>

@@ -8,7 +8,7 @@ import Bell from "../assets/bell.svg";
 export function Topbar() {
   const { isConnected } = useAccount();
   return (
-    <div className="min-w-full h-[120px] flex flex-row justify-between py-10 pl-5 pr-[66px] items-center">
+    <div className="min-w-full h-[120px] flex flex-row justify-between py-10 pl-5 pr-[66px] items-center z-10">
       <ConnectButton.Custom>
         {({
           account,

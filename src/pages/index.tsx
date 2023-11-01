@@ -57,15 +57,18 @@ function Page() {
       <div className='flex flex-row'>
         <Navbar />
         <div
-          className='flex flex-col w-full dash min-h-screen py-10'
+          className='flex flex-col w-full min-h-screen p-10 relative'
           style={{ backgroundColor: '#140013' }}
         >
+          <div className='w-full h-[40vh] absolute dash top-0 bottom-0 left-0 right-0'>
+            <div className='w-full h-[20vh] absolute bg-gradient-to-b from-[#14001300] to-[#140013ff] bottom-0 left-0 right-0'></div>
+          </div>
           <Topbar />
-          <div className='w-full h-full mt-[76px] flex flex-row flex-wrap items-center justify-around gap-x-[45px] gap-y-[36px]'>
+          <div className='w-full h-full mt-[calc(40vh_-_100px)] flex flex-row flex-wrap items-center justify-around gap-x-[45px] gap-y-[36px]'>
             {links.map((link, index) => (
               <ItemLink
                 href={link.alive ? link.path : ''}
-                className='relative bg-blue'
+                className='relative'
                 key={index}
               >
                 <div className='absolute left-[24px] top-[28px]'>
