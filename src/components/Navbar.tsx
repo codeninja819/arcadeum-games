@@ -1,7 +1,7 @@
 import { useAccount, useEnsName } from 'wagmi';
 import Image from 'next/image';
 import Link from 'next/link';
-import Jrny from '../assets/jrny.png';
+import Logo from '../assets/logo.png';
 import Home from '../assets/home.svg';
 import Raffle from '../assets/raffle.svg';
 import Coin from '../assets/coin.svg';
@@ -33,11 +33,10 @@ export function Navbar() {
       path: '/lotto',
       alive: false,
     },
-    { icon: <Sports width="18" />, title: 'Sports', path: '/lotto', alive: false },
     {
-      icon: <Roullette />,
-      title: 'Roullette',
-      path: '/roullette',
+      icon: <Sports width='18' />,
+      title: 'Sports',
+      path: '/lotto',
       alive: false,
     },
   ];
@@ -51,13 +50,10 @@ export function Navbar() {
           className='my-[50px] mx-[19px] flex flex-col justify-center items-center'
         >
           <Image
-            src={Jrny}
+            src={Logo}
             alt='Logo-Image'
             className='rounded-[20px] w-[105px] h-full mb-[5px]'
           />
-          <div className='rounded-[20px] w-[191px] h-full flex justify-center text-[24px] text-center'>
-            Arcadeum Games
-          </div>
         </Link>
 
         {links.map((item, index) =>
